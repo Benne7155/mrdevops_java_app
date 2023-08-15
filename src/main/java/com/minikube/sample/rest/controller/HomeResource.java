@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @created 06-12-2018
  */
 @RestController
-@RequestMapping("/home1")
+@RequestMapping("/home")
 public class HomeResource {
 
 	@Autowired
