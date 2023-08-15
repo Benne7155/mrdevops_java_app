@@ -1,16 +1,23 @@
-Pipeline { 
-agent any
+pipeline{  
 
-stages{ 
+  agent any
 
- stage('git checkout'){
-    steps{
-        script{
+  stages{
 
-            git branch: 'feature', url: 'https://github.com/Benne7155/mrdevops_java_app.git'
+    stage('git checkout'){
+
+        steps{
+
+            script{ 
+
+                
+            }
         }
     }
 
-}
+  }
+
+
+
 
 }
