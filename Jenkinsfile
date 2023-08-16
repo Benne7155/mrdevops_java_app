@@ -15,8 +15,16 @@ pipeline{
                   url: "https://github.com/Benne7155/mrdevops_java_app.git"
                 )
             }
+
         }
     }
+   stage('Unit Test Maven'){
 
+        steps{
+
+            script{ 
+               mvnTest 
+            }
+        }
   }
 }
