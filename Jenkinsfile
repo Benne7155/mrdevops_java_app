@@ -9,9 +9,8 @@ pipeline{
 
   stages{
 
-    when { expression{ param.action == 'create'} }
-
     stage('git checkout'){
+    when { expression{ param.action == 'create'} }
 
         steps{
 
@@ -25,7 +24,6 @@ pipeline{
         }
     }
     stage('Unit Test Maven'){
-    
     when { expression{ param.action == 'create'} }
 
         steps{
@@ -36,7 +34,6 @@ pipeline{
         }
   }
     stage('Integration Test Maven'){
-    
     when { expression{ param.action == 'create'} }
 
 
@@ -49,8 +46,7 @@ pipeline{
   }
 
   stage('static code analysis :sonar'){
-    
-    when { expression{ param.action == 'create'} }
+  when { expression{ param.action == 'create'} }
 
 
         steps{
