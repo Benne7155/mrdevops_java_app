@@ -70,17 +70,5 @@ pipeline{
             }
         }
   }
-
-  stage('maven build :maven'){
-  when { expression{ params.action == 'create'} }
-
-
-        steps{
-
-            script{ 
-              mvnBuild() 
-            }
-        }
-  
-}
+  }
 }
