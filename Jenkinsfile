@@ -45,7 +45,7 @@ pipeline{
         }
   }
 
-  stage('static code analysis :sonar'){
+  stage('static code analysis :Sonarqube'){
   when { expression{ params.action == 'create'} }
 
 
@@ -58,7 +58,7 @@ pipeline{
         }
   }
 
-  stage('Quality gate status check :sonar'){
+  stage('Quality gate status check :Sonarqube'){
   when { expression{ params.action == 'create'} }
 
 
@@ -74,10 +74,8 @@ pipeline{
   stage('Maven Build : maven'){
   when { expression{ params.action == 'create'} }
 
-
         steps{
             script{ 
-              
               mvnBuild()
             }
         }
